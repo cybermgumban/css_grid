@@ -21,8 +21,46 @@
     -->
     <title>React App</title>
     <style>
-      .div:nth-child(even) {
+      .wrapper div:nth-child(even) {
         background-color: red;
+      }
+
+      .wrapper div:nth-child(odd) {
+        background-color: blue;
+      }
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1em;
+        grid-template-areas:
+          "box6 box5 box4"
+          "box3 box2 box1";
+      }
+
+      .box1 {
+        grid-area: box1;
+      }
+
+      .box2 {
+        grid-area: box2;
+      }
+
+      .box3 {
+        grid-area: box3;
+      }
+
+      .box4 {
+        grid-area: box4;
+      }
+
+      .box5 {
+        grid-area: box5;
+      }
+
+      .box6 {
+        grid-area: box6;
       }
 
     </style> 
@@ -33,13 +71,14 @@
       You need to enable JavaScript to run this app.
     </noscript> 
 
-    <div id="wrapper"></div>
-        <p class="box1">Box 1</p>
-        <p class="box2">Box 2</p>
-        <p class="box3">Box 3</p>
-        <p class="box4">Box 4</p>
-        <p class="box5">Box 5</p>
-        <p class="box6">Box 6</p>        
+    <div class="wrapper">
+        <div class="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id praesentium, placeat, animi a aliquam est. Vitae, minima officia numquam voluptatem!</div>
+        <div class="box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique doloremque sapiente, expedita id odit ad sequi voluptates! Molestias vel aspernatur iure, delectus iusto fugiat eos, enim adipisci eaque, exercitationem in.20</div>
+        <div class="box3">Box 3</div>
+        <div class="box4">Box 4</div>
+        <div class="box5">Box 5</div>
+        <div class="box6">Box 6</div> 
+    </div>       
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
